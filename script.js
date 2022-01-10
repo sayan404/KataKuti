@@ -51,7 +51,14 @@ human.addEventListener('click', () => {
                 finish = true;
                 document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
             }
-        })
+        }) 
+        
+         if((boxtexts[0].innerText !== "") && (boxtexts[1].innerText !== "") && (boxtexts[2].innerText !== "") && (boxtexts[3].innerText !== "") && (boxtexts[4].innerText !== "") && (boxtexts[5].innerText !== "") && (boxtexts[6].innerText !== "") && (boxtexts[7].innerText !== "") && (boxtexts[8].innerText !== ""))
+        {
+            document.querySelector('.info').innerText =  " DRAW";
+            finish = true;
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
+        }    
     }
     // Chief Logic
     let boxes = document.getElementsByClassName("box");
@@ -203,6 +210,12 @@ computer.addEventListener('click', () => {
             else if ((boxtexts2[e[0]].innerText !== "") && (boxtexts2[e[0]].innerText === "0") && (boxtexts2[e[0]].innerText === boxtexts2[e[1]].innerText) && (boxtexts2[e[1]].innerText === boxtexts2[e[2]].innerText)) {
                 finish2 = true;
                 document.querySelector('.info').innerText = boxtexts2[e[0]].innerText + " Computer WON";
+                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
+            }
+            
+            else{
+                finish2 = true;
+                document.querySelector('.info').innerText = " DRAW";
                 document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
             }
         })
