@@ -200,6 +200,12 @@ computer.addEventListener('click', () => {
             else if (boxtexts2[8].innerText === "") {
                 boxtexts2[8].innerText = "0";
             }
+            
+            else{
+                finish2 = true;
+                document.querySelector('.info').innerText = " DRAW";
+                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
+            }
         }
         wins2.forEach(e => {
             if ((boxtexts2[e[0]].innerText !== "") && (boxtexts2[e[0]].innerText === "X") && (boxtexts2[e[0]].innerText === boxtexts2[e[1]].innerText) && (boxtexts2[e[1]].innerText === boxtexts2[e[2]].innerText)) {
@@ -213,11 +219,7 @@ computer.addEventListener('click', () => {
                 document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
             }
             
-            else{
-                finish2 = true;
-                document.querySelector('.info').innerText = " DRAW";
-                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = '300px';
-            }
+        
         })
     }
 
