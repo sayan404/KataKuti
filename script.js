@@ -1,6 +1,6 @@
 console.log("Welcome to Tic Tac Toe")
 let music = new Audio("bgm.mp3")
-let audioTurn = new Audio("ting.mp3")
+// let audioTurn = new Audio("ting.mp3")
 let gameover = new Audio("gameover.mp3")
 
 play = document.getElementById('play');
@@ -62,7 +62,8 @@ human.addEventListener('click', () => {
                 if (finish === false) {
                     boxtext.innerText = turn;
                     turn = changeTurn();
-                    audioTurn.play();
+
+//               audioTurn.play();
                     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
                     checkWin();
                 }
@@ -215,7 +216,7 @@ computer.addEventListener('click', () => {
                 if (finish2 === false) {
                     boxtext2.innerText = "X";
                     // turn = changeTurn();
-                    audioTurn.play();
+//                     audioTurn.play();
                     // document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
                     checkWin2();
                 }
